@@ -788,9 +788,9 @@ public class MainActivity extends Activity {
     // === СЕТЕВОЕ ОБНОВЛЕНИЕ БАЗЫ ===
 
     // URL базы на GitHub Releases. Замени <USER>/<REPO> на свой!
-    private static final String REMOTE_DB_URL =
+    private static final String REMOTE_DB_URL = https://github.com/ivanmeister1337/RadioNameHook-DB/blob/main/radio.db
         "https://raw.githubusercontent.com/YOUR_USER/YOUR_REPO/main/radio.db";
-    private static final String REMOTE_VERSION_URL =
+    private static final String REMOTE_VERSION_URL = https://github.com/ivanmeister1337/RadioNameHook-DB/blob/main/radio.db.version
         "https://raw.githubusercontent.com/YOUR_USER/YOUR_REPO/main/radio.db.version";
     private static final String REMOTE_META_PATH = DIR_PATH + "/remote_meta.txt";
     private static final long AUTO_CHECK_INTERVAL = 24 * 60 * 60 * 1000L; // 24 часа
