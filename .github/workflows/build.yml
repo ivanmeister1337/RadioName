@@ -29,6 +29,16 @@ jobs:
       - name: Build debug APK
         run: gradle assembleDebug --stacktrace
 
+      - name: List build outputs (diagnostic)
+        if: always()
+        run: |
+          echo "=== Searching for any .apk files ==="
+          find . -name "*.apk" -not -path "*/node_modules/*" 2>/dev/null || echo "No APK files found anywhere"
+          echo "=== Contents of app/build/outputs (if exists) ==="
+          find app/build/outputs -type f 2>/dev/null || echo "app/build/outputs does not exist"
+          echo "=== Keystore check ==="
+          ls -la keystore/ 2>/dev/null || echo "keystore/ directory not found"
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
